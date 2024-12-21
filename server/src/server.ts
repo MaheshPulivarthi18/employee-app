@@ -6,8 +6,11 @@ import { employeeRouter } from "./employee.routes";
 
 // Load environment variables from the .env file, where the ATLAS_URI is configured
 dotenv.config();
-
-const { ATLAS_URI } = process.env;
+ const username = "maheshpulivarthi18";
+ const password = encodeURIComponent("Mahesh@11066"); // URL-encode the password
+ const cluster = "cluster0.zjpnr.mongodb.net";
+const dbName = "valuefy"; // Replace with your actual database name
+const ATLAS_URI  =`mongodb+srv://${username}:${password}@${cluster}/${dbName}?retryWrites=true&w=majority` ;
 
 if (!ATLAS_URI) {
   console.error(
