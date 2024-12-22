@@ -1,18 +1,17 @@
-version: '3.8'
 
 services:
   frontend:
-    image: maheshpulivarthi/mean-stack:frontend-v31.0.0
+    image: maheshpulivarthi/mean-stack:angular-nginx1
     container_name: frontend-container
     ports:
-      - "4200:80"  # Map Nginx's port 80 to port 80 on the host
+      - "8080:80"  
     networks:
       - mean-stack-example_mean-stack-network
     depends_on:
       - backend  # Ensure backend is up before starting frontend (optional but recommended)
 
   backend:
-    image: maheshpulivarthi/mean-stack:backend-v2.0.0
+    image: maheshpulivarthi/mean-stack:backend-v1.0.0
     container_name: backend-container
     ports:
       - "5200:5200"  # Map backend API to port 5200 on the host

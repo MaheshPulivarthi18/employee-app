@@ -1,0 +1,9 @@
+**/node_modules/
+**/.git
+**/README
+**/.editorconfig
+**/coverage
+**/.env
+**/dist
+**/npm -debug.log
+**/README.node_modules
